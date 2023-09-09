@@ -1,11 +1,24 @@
+:root {
+    --primary-theme-color: #087ea4;
+    --primary-text-color: #f7f8f9;
+    --secondary-text-color: #bbb;
+    --primary-shadow-color: #ffffff80;
+    --light-primary-shadow-color: #00000080;
+    --primary-font-family: monospace;
+    --element-spacing: 16px;
+    --element-size: 16px;
+    --border-radius: 16px;
+}
+
 body {
     min-height: 100vh;
     margin: 0;
-    background-image: url('https://i.postimg.cc/x9MyhM3D/react-system.webp');
+    background-image: url('https://i.postimg.cc/0N1fCNjk/slipknot.png');
     background-size: cover;
     background-position: center;
-    color: white;
-    font-family: monospace;
+    color: var(--primary-text-color);
+    font-size: var(--element-size);
+    font-family: var(--primary-font-family);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,14 +26,12 @@ body {
 
 main {
     max-width: 320px;
-    padding: 16px;
-    margin: 16px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(16px);
-    border-radius: 16px;
-    box-shadow:
-        0 0 4px 2px rgba(255, 255, 255, 0.5),
-        0 0 8px 4px rgba(255, 255, 255, 0.5);
+    padding: var(--element-spacing);
+    margin: var(--element-spacing);
+    background-color: var(--light-primary-shadow-color);
+    backdrop-filter: blur(var(--element-size));
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 4px 2px var(--primary-shadow-color) ;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -31,7 +42,7 @@ main {
 img {
     display: block;
     border-radius: 50%;
-    box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px 4px var(--primary-shadow-color);
 }
 
 h1,
@@ -42,7 +53,7 @@ p {
 
 h2,
 span {
-    color: #888;
+    color: var(--secondary-text-color);
     font-weight: 400;
 }
 
@@ -66,6 +77,13 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
+}
+
+.skill {
+    background-color: var(--primary-theme-color);
+    padding: 4px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 700;
 }
 
 a {
